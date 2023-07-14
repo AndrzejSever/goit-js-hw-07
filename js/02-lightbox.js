@@ -20,26 +20,9 @@ const nowGallery = galleryItems => {
 const nowMarkup = nowGallery(galleryItems);
 galleryMarking.insertAdjacentHTML('beforeend', nowMarkup);
 
-
-galleryMarking.addEventListener("click", selectPicture)
-
-
-function selectPicture(event) {
-    
-    event.preventDefault(event);  
-    if (event.target.nodeName !== 'IMG') {
-        console.log(event.target.nodeName)
-        return
-    }
-    const lightbox = new SimpleLightbox('.gallery a', {
+  const lightbox = new SimpleLightbox('.gallery a', {
         captionsData : "alt" , captionDelay : 250
-  });
-};
+  })
 
 
-// galleryMarking.addEventListener("keydown", evt => {
-//     if (evt.code === 'Escape') {
-//         instance.close();
-//     }
-// });
 

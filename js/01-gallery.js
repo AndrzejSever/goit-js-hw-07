@@ -31,7 +31,11 @@ galleryMarking.addEventListener("click", selectPicture)
 
 function selectPicture(event) {
     
-    event.preventDefault(event);  
+  event.preventDefault(event);  
+  
+   if (event.target.nodeName !== 'IMG') {        
+        return
+    }
     
     const instance = basicLightbox.create(`<img src = '${event.target.dataset.source}'>`);
     instance.show();
