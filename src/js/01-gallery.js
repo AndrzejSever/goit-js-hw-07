@@ -33,7 +33,7 @@ function selectPicture(event) {
     
     event.preventDefault(event);  
     
-    const instance = basicLightbox.create(`<img src = '${event.target.dataset.source}'width = '800' height= '600'>`);
+    const instance = basicLightbox.create(`<img src = '${event.target.dataset.source}'>`);
     instance.show();
 };
 
