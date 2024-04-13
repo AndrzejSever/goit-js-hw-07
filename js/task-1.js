@@ -18,3 +18,18 @@ elAccess.forEach(function (item, index) {
  Elements: ${elements}`
   );
 });
+
+
+
+const varParental = document.querySelector('body>ul')
+varParental.classList.add("parental")
+
+
+const varFilial = document.querySelectorAll(".item>ul")
+// varFilial.classList.add("filial")
+
+const arrFilial = [...varFilial]
+
+arrFilial.forEach(el => 
+el.classList.add("filial")
+)
