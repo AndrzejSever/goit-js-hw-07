@@ -15,7 +15,7 @@ wayImput.addEventListener("input", (event) => {
   };
  
   waySpan.textContent = eventTarget;
-
 });
+
 
   
