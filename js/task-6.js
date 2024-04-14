@@ -1,7 +1,6 @@
 const buttonCreate = document.querySelector("button[data-create]");
 const buttonDestroy = document.querySelector("button[data-destroy]");
 const container = document.querySelector("#boxes");
-const marking = "<div class='square'></div>";
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
@@ -14,7 +13,7 @@ buttonCreate.addEventListener("click", eventFunction);
 
 function eventFunction() {
   if (counter.value <= 100 && counter.value > 0) {
-    createBoxes(counter.value) * counter.value;
+    createBoxes(counter.value);
   }
 
   counter.value = null;
@@ -22,17 +21,22 @@ function eventFunction() {
 
 function createBoxes(num) {
   container.innerHTML = "";
+  const marking = [];
+
   while (num > 0) {
-    container.insertAdjacentHTML("beforeend", marking);
+    marking.push("<div class='square'></div>");
     num -= 1;
   }
+
+  console.log(marking);
+  container.insertAdjacentHTML("beforeend", marking.join(""));
+
   const colorWay = document.querySelectorAll(".square");
   const backColor = [...colorWay];
+
   backColor.map((el, index) => {
     el.style.backgroundColor = getRandomHexColor();
     const x = 30 + index * 10;
-    console.log(x.toString());
-
     el.style.width = x.toString() + "px";
     el.style.height = x.toString() + "px";
   });
