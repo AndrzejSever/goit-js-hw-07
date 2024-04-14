@@ -133,12 +133,19 @@ body {
   text-align: center;
   border: 1px solid;
   border-radius: 8px;
+ 
 }
 
+#boxes{
+  display: flex;
+ gap: 16px;
+ flex-wrap: wrap;
+ padding: 32px;
+}
+
+
 .square {
-  border: 1px solid;
-  /* width: 30px;
-  height: 30px; */
+  border: 0px;
 }
 
 .btm-create {
