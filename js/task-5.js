@@ -5,8 +5,8 @@ function getRandomHexColor() {
 }
 
 const changeBackground  = document.body
-const spanBackground = document.querySelector('span.color')
-const buttonBackground = document.querySelector('button.change-color')
+const spanBackground = document.querySelector('.color')
+const buttonBackground = document.querySelector('.change-color')
 
 buttonBackground.addEventListener("click", backgroundColorStyle)
 
@@ -15,3 +15,5 @@ function backgroundColorStyle() {
     changeBackground.style.backgroundColor = colorBady
     spanBackground.textContent = colorBady
 }
+
+

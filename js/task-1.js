@@ -1,10 +1,4 @@
-// const elAccess = document.querySelectorAll(".item");
 
-// const Arr = [...elAccess];
-
-// console.log(Arr);
-
-// Arr.forEach( el =>  )
 
 const elAccess = document.querySelectorAll(".item");
 

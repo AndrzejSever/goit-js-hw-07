@@ -43,20 +43,6 @@ const nowGall = img => {
 const nowMarkup = nowGall(images);
 
 
-console.log(nowMarkup)
-
 
 nowImag.insertAdjacentHTML('beforeend', nowMarkup);
 
-
-// nowImag.style.display = 'flex'; 
-// nowImag.style.gap = '24px';
-
-
- 
-
-
-// x.forEach(element => {
-//   element.querySelector(".imgGall").style.width = '250px';
-//   element.querySelector(".imgGall").style.height = '250px'
-// });
